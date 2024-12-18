@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
-  background-color: #2b2d42; /* Light background for contrast */
+  background-color: white; /* Light background for contrast */
   margin: 3rem 0; /* Space between sections */
 }
 
@@ -15,12 +15,13 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: black;
 }
 
 .new-arrivals-content p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: white; /* Slightly darker color for the paragraph */
+  color: black; /* Slightly darker color for the paragraph */
 }
 
 .explore-button {

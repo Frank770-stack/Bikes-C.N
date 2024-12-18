@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Hero.css";
-import heroImage1 from "../Assets/bike-hero.jpg";
-import heroImage2 from "../Assets/hero2.jpg";
-import heroImage3 from "../Assets/hero3.jpg";
+import heroImage1 from "../Assets/kev1.jpg";
+import heroImage2 from "../Assets/kev2.jpg";
+import heroImage3 from "../Assets/kev7.jpg";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
@@ -24,7 +24,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       changeImage();
-    }, 2000); // 2000 milliseconds = 2 seconds
+    }, 3000); // 2000 milliseconds = 2 seconds
 
     // Clean up the interval when the component is unmounted
     return () => clearInterval(interval);
@@ -40,7 +40,11 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-text">
-        <h1>Two Wheels, Endless Possibilities!</h1>
+        <h1>
+          Two Wheels
+          <br />
+          Endless Possibilities!
+        </h1>
 
         <button onClick={() => navigate("/shop")}>Explore Products</button>
       </div>

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #00171f;
+  background-color: white;
   gap: 2rem;
   flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
 }
@@ -13,7 +13,7 @@
   flex: 1;
   text-align: center;
   padding: 1rem;
-  background-color: #00171f;
+  background-color: #222;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

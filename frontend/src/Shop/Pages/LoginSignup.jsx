@@ -7,6 +7,8 @@ const LoginSignup = () => {
     username: "",
     password: "",
     email: "",
+    firstName: "",
+    lastName: "",
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -21,28 +23,32 @@ const LoginSignup = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:4000/login", {
+      const response = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({
           email: formData.email,
           password: formData.password,
         }),
       });
 
-      const responseData = await response.json();
+      const data = await response.json();
 
-      if (responseData.success) {
-        localStorage.setItem("auth-token", responseData.token);
+      if (response.ok) {
+        console.log(data);
+
+        localStorage.setItem("auth-token", data);
         window.location.replace("/"); // Redirect to home page
       } else {
-        setError("Login failed: " + responseData.errors);
+        setError("Login failed: " + data.message);
       }
     } catch (err) {
       setError("Error: Unable to reach the server.");
+      console.log(err);
     } finally {
       setLoading(false);
     }
@@ -53,28 +59,33 @@ const LoginSignup = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:4000/signup", {
+      const response = await fetch("http://localhost:5000/auth/register", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({
           username: formData.username,
           email: formData.email,
           password: formData.password,
+          lastName: formData.lastName,
+          firstName: formData.firstName,
         }),
       });
 
-      const responseData = await response.json();
+      const data = await response.json();
 
-      if (responseData.success) {
-        localStorage.setItem("auth-token", responseData.token);
+      if (response.ok) {
+        localStorage.setItem("auth-token", data);
         window.location.replace("/"); // Redirect to home page
       } else {
-        setError("Sign Up failed: " + responseData.errors);
+        setError("Sign Up failed: " + data.message);
       }
     } catch (err) {
+      console.log(err);
+
       setError("Error: Unable to reach the server.");
     } finally {
       setLoading(false);
@@ -87,15 +98,31 @@ const LoginSignup = () => {
         <h1>{state}</h1>
         <div className="loginsignup-fields">
           {state === "Sign Up" && (
-            <input
-              name="username"
-              value={formData.username}
-              onChange={changeHandler}
-              type="text"
-              placeholder="Your Name"
-              required
-            />
+            <>
+              <input
+                name="username"
+                value={formData.username}
+                onChange={changeHandler}
+                placeholder="Username"
+                required
+              />
+              <input
+                name="firstName"
+                value={formData.firstName}
+                onChange={changeHandler}
+                placeholder="First Name"
+                required
+              />
+              <input
+                name="lastName"
+                value={formData.lastName}
+                onChange={changeHandler}
+                placeholder="Last Name"
+                required
+              />
+            </>
           )}
+
           <input
             name="email"
             value={formData.email}

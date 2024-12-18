@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ProductGallery.css";
+
 import Bikelock from "../Assets/Bikelock.jpg";
 import Bottle from "../Assets/Bottle.jpg";
 import Brake from "../Assets/Brake.jpg";
@@ -18,6 +19,7 @@ import Roadbike from "../Assets/Roadbike.jpg";
 import Seat from "../Assets/Seat.jpg";
 import Shoes from "../Assets/Shoes.jpg";
 import Tires from "../Assets/Tires.jpg";
+
 import { useCart } from "../Context/Cartcontext.jsx"; // Import useCart
 
 const ProductGallery = () => {
@@ -154,6 +156,7 @@ const ProductGallery = () => {
       image: Rack,
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -184,7 +187,11 @@ const ProductGallery = () => {
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <p>${product.price}</p>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
+            <div className="button-container">
+              <button className="btn" onClick={() => addToCart(product)}>
+                Add to Cart
+              </button>
+            </div>
           </div>
         ))}
       </div>

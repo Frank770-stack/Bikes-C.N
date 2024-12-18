@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Features.css";
 import { useNavigate } from "react-router-dom";
 // Example images (update with your actual image imports)
-import featureImage1 from "../Assets/Features1.jpg";
-import featureImage2 from "../Assets/Features2.jpg";
-import featureImage3 from "../Assets/Features3.jpg";
+import featureImage1 from "../Assets/kev7.jpg";
+import featureImage2 from "../Assets/kev6.jpg";
+import featureImage3 from "../Assets/kev3.jpg";
 
 function Features() {
   // Array of images

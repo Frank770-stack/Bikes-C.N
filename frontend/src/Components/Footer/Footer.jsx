@@ -1,49 +1,42 @@
 import React from "react";
-import "./Footer.css"; // Make sure to import the CSS file
+import "./Footer.css";
 
-// You can replace the '#' with your social media URLs
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <p>&copy; 2024 The Cycling Network. All rights reserved.</p>
-        <div className="social-icons">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <i className="fab fa-linkedin-in"></i>
-          </a>
+    <footer className="shop-footer">
+      <div className="shop-footer-content">
+        <div className="shop-footer-section">
+          <h3>Location</h3>
+          <p>123 Bicycle St., Bike City, BC 12345</p>
         </div>
+        <div className="shop-footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@bicyclestore.com</p>
+          <p>Phone: +1 234 567 890</p>
+        </div>
+        <div className="shop-footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <a href="/">Facebook</a>
+            </li>
+            <li>
+              <a href="/">Instagram</a>
+            </li>
+            <li>
+              <a href="/">Twitter</a>
+            </li>
+            <li>
+              <a href="/">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="shop-footer-bottom">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

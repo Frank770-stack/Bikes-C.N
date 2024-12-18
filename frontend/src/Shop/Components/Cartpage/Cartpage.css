@@ -121,3 +121,46 @@
   color: black;
   border: 1px solid black;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .cart {
+    margin: 20px; /* Reduce margin on mobile */
+    padding: 15px; /* Reduce padding on mobile */
+  }
+
+  .cart h2 {
+    font-size: 1.5rem; /* Smaller heading on mobile */
+  }
+
+  .cart li {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .cart li img {
+    width: 60px; /* Smaller image on mobile */
+    height: 60px; /* Smaller image on mobile */
+  }
+
+  .cart li h3 {
+    font-size: 0.9rem; /* Smaller product name on mobile */
+  }
+
+  .cart li p {
+    font-size: 0.8rem; /* Smaller price and quantity text on mobile */
+  }
+
+  .cart li input[type="number"] {
+    width: 40px; /* Smaller input field on mobile */
+  }
+
+  .cart h3 {
+    font-size: 1rem; /* Smaller total price on mobile */
+  }
+
+  .cart button {
+    padding: 8px 15px; /* Smaller button padding on mobile */
+    font-size: 0.9rem; /* Smaller button text on mobile */
+  }
+}

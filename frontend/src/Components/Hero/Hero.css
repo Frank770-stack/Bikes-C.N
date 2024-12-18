@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  background-color: #00171f; /* Dark background for contrast */
-  color: white;
+  background-color: #fff; /* Assuming a white background */
+  color: black;
   padding: 0 1rem;
   position: relative;
   margin-top: 3rem; /* Add space to ensure the hero section is below the navbar */
@@ -15,22 +15,18 @@
   z-index: 2; /* Make sure the text is above the image */
   padding: 0 1rem;
   position: relative;
+  text-align: left; /* Align text to the left */
 }
 
 .hero-text h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6; /* Adjust line height for better readability */
+  line-height: 1.2; /* Adjust line height for better spacing between lines */
 }
 
 .hero-text button {
-  background-color: #003459; /* Darker shade of orange */
+  background-color: #003459; /* Darker shade of blue */
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -38,6 +34,7 @@
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  margin-top: 1rem; /* Add space between the heading and button */
 }
 
 .hero-text button:hover {
@@ -63,7 +60,7 @@
     flex-direction: column; /* Stack text and image vertically on smaller screens */
     text-align: center;
     height: auto; /* Allow content to grow vertically */
-    margin-top: 60px; /* Keep space for the navbar on mobile as well */
+    margin-top: 60px; /* Keep space for the navbar on mobile */
   }
 
   .hero-text {
