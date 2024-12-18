@@ -1,0 +1,89 @@
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Logo */
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-logo a:hover {
+  color: #f9a825; /* Highlight color */
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-bottom: 2px; /* Spacing for the underline */
+}
+
+.navbar-links a:hover {
+  color: red; /* Highlight color */
+}
+
+.navbar-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: red; /* Red underline */
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%; /* Full underline width on hover */
+}
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: red; /* Highlight color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+}

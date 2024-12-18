@@ -1,0 +1,158 @@
+/* General styling for the slideshow container */
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white; /* Background color set to white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for positioning the navigation buttons */
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Styling for the product gallery grid */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Enforce 6 items per row */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Styling for individual product cards */
+.product-card {
+  background-color: #f9f9f9; /* Light gray for contrast */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  position: relative; /* Required for positioning the button */
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for product images */
+.product-card img {
+  width: 100%; /* Take up the full width of the card */
+  height: auto;
+  max-height: 150px; /* Make the images bigger */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Styling for product name */
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Styling for product description */
+.product-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Add to Cart button - initially hidden */
+.product-card button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  position: absolute; /* Position the button over the image */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Show the button when hovering over the product card */
+.product-card:hover button {
+  opacity: 1; /* Make button visible */
+}
+
+/* Add hover effect for the button */
+.product-card button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* Navigation buttons styling */
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.nav-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transform: scale(1.1);
+}
+
+.nav-button:first-of-type {
+  position: absolute;
+  left: -25px; /* Move left button outside the container */
+}
+
+.nav-button:last-of-type {
+  position: absolute;
+  right: -25px; /* Move right button outside the container */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .product-gallery {
+    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 items per row */
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .nav-button:first-of-type {
+    left: 0; /* Adjust for smaller screens */
+  }
+
+  .nav-button:last-of-type {
+    right: 0; /* Adjust for smaller screens */
+  }
+}

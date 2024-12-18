@@ -1,0 +1,74 @@
+/* Basic footer styles */
+.shop-footer {
+  background-color: white;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Content area of the footer */
+.shop-footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Footer section style */
+.shop-footer-section {
+  width: 25%;
+  padding: 10px;
+}
+
+/* Make headings bold */
+.shop-footer-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the contact info and location */
+.shop-footer-section p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Style the social media links */
+.shop-footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.shop-footer-section li {
+  margin-bottom: 8px;
+}
+
+.shop-footer-section a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.shop-footer-section a:hover {
+  color: #0073e6;
+}
+
+/* Bottom footer text */
+.shop-footer-bottom {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .shop-footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .shop-footer-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

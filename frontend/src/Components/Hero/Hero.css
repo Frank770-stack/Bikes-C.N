@@ -1,0 +1,99 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #00171f; /* Dark background for contrast */
+  color: white;
+  padding: 0 1rem;
+  position: relative;
+  margin-top: 3rem; /* Add space to ensure the hero section is below the navbar */
+}
+
+.hero-text {
+  max-width: 700px; /* Limit the width of the text section */
+  z-index: 2; /* Make sure the text is above the image */
+  padding: 0 1rem;
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.hero-text button {
+  background-color: #003459; /* Darker shade of orange */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #c44e00; /* Darker orange for hover */
+}
+
+.hero-image {
+  display: flex;
+  justify-content: flex-end; /* Align the image to the right */
+  flex-grow: 1;
+}
+
+.hero-image img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack text and image vertically on smaller screens */
+    text-align: center;
+    height: auto; /* Allow content to grow vertically */
+    margin-top: 60px; /* Keep space for the navbar on mobile as well */
+  }
+
+  .hero-text {
+    max-width: none; /* Allow text section to expand on smaller screens */
+    margin-bottom: 2rem; /* Space between text and image */
+    padding: 0 1rem; /* Add padding to avoid text touching edges */
+    order: 1; /* Ensure text comes first */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 0.8rem; /* Space between title and paragraph */
+  }
+
+  .hero-text button {
+    padding: 0.8rem 1.5rem; /* Smaller button padding */
+  }
+
+  .hero-image {
+    width: 100%; /* Make the image full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 5rem; /* Space between text and image */
+    order: 2; /* Ensure image comes after the text */
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners for the image */
+  }
+}

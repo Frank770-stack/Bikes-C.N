@@ -1,0 +1,50 @@
+/* Footer container */
+.footer {
+  background-color: #00171f; /* Dark background color */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Footer content */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer text */
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Social media icons container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Individual social media icon */
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #d35400; /* Orange color on hover */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 0.8rem;
+  }
+
+  .social-icon {
+    font-size: 1.3rem;
+  }
+}

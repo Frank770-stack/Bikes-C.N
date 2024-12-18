@@ -1,0 +1,87 @@
+/* Features Section Styling */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #8d99ae;
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.features-text h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.features-text p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features-image {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+}
+
+.features-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Button Styling */
+.explore-button {
+  background-color: #003459;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #e65b00;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-text h3 {
+    font-size: 2rem;
+  }
+  .features {
+    padding-top: -10px; /* Reduce padding at the top */
+    margin-top: 0; /* Ensure there's no extra margin at the top */
+  }
+
+  .features-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .features-image {
+    max-width: 100%;
+  }
+
+  .explore-button {
+    padding: 0.8rem 1.5rem;
+  }
+}

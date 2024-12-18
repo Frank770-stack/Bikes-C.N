@@ -1,0 +1,72 @@
+/* Hero Section */
+.heroshop {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px); /* Adjust for the height of the navbar */
+  overflow: hidden;
+  margin-top: 70px; /* Ensure it starts just below the navbar */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: white;
+}
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  text-align: center;
+  color: white; /* Text color for contrast */
+  z-index: 10;
+  animation: fadeIn 5s ease-in-out;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
+  color: gray;
+}
+
+.hero-subtitle {
+  display: block;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  color: gray;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 4rem; /* Slightly smaller for larger tablets/laptops */
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem; /* Adjust subtitle size */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem; /* Smaller for mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem; /* Smaller for mobile */
+  }
+}

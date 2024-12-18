@@ -1,0 +1,73 @@
+.header {
+  background-color: #0d0c0f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: Arial, sans-serif;
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Full navigation for larger screens */
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #d35400;
+}
+
+/* Hamburger menu for small screens */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show toggle button */
+  }
+
+  .navigation {
+    display: none; /* Hide navigation by default */
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1b1725;
+    padding: 1rem;
+    border: 1px solid #d35400;
+    border-radius: 4px;
+    width: 200px;
+    z-index: 10;
+  }
+
+  .navigation.open {
+    display: flex; /* Show navigation when open */
+  }
+}
